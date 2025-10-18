@@ -1,0 +1,60 @@
+students=[(101,'rama','Python'),
+          (102,'suri','java'),
+          (103,'uma','Python'),
+          (104,'thanmai','HTML')]
+def display_students():
+    print("\n display all students records:")
+    for s in students:
+        print(f"sid{s[0]}|name:{s[1]}|course:{s[2]}")
+def add_students():
+    sid= int(input("enter any id:"))
+    name=input("enter any name:")
+    course=input("enter any course:")
+    students.append((sid,name,course))
+    print(f"{name}  added successfully")
+def unique_courses():
+    course_set={s[2] for s in students}
+    print("\n available courses:",course_set)
+def remove_students():
+    students.remove((students[3][0],students[3][1],students[3][2]))
+    print("removed successfully")
+def students_by_course():
+    course_name=input("enter any course:")
+    print("\n students enrolled in{course_name}:")
+    found=False
+    for s in students:
+        if s[2].lower()==course_name.lower():
+            print(f"{s[1]}(id:{s[0]})")
+            found=False
+        if not found:
+            print("no students are found this course")
+def count_total_students():
+    total = len(students)
+    print("Total students:", total)
+while True:
+    print("\n ===== STUDENTS ENROLLEMENT SYSTEM =====")
+    print("1.display all students")
+    print("2.add students")
+    print("3.show unique course")
+    print("4.remove students")
+    print("5.show students by course")
+    print("6.total number of students")
+    print("7.exit")
+    choice=input("enter any choice:")
+    if choice=="1":
+        display_students()
+    elif choice=="2":
+        add_students()
+    elif choice=="3":
+        unique_courses()
+    elif choice=="4":
+        remove_students()
+    elif choice=="5":
+        students_by_course()
+    elif choice=="6":
+        count_total_students
+    elif choice=="7":
+        print("thank you for using this system")
+        break
+    else:
+        print("invalid choice")
