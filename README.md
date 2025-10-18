@@ -1,11 +1,15 @@
-Project Name
-Title: Student Course Enrollment System
-Technologies Used: Python (Lists, Tuples, Sets)
+               Project Name
 
-Description:
+Title: Student Course Enrollment System
+
+Technologies Used: Python
+
+                Description:
+
 Developed a console-based student enrollment system that stores and manages student details and course registrations using Python data structures. Implemented unique course tracking using sets and immutable student data with tuples.
 
-Key Features:
+                 Key Features:
+
 - Added new students dynamically using lists.
 - Extracted unique courses using sets to prevent duplicates.
 - Displayed students enrolled in specific courses.
